@@ -10,8 +10,8 @@ mod tests {
     fn move_semantics4() {
         let mut x = Vec::new();
         let mut y = &mut x;
-        let z = &mut y;
         y.push(42);
+        let z = &mut y;
         z.push(13);
         assert_eq!(x, [42, 13]);
     }
